@@ -6,13 +6,13 @@
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 00:17:31 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/01 00:20:36 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:07:35 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i])

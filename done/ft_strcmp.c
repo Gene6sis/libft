@@ -6,13 +6,13 @@
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 23:29:52 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/01 23:32:22 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:07:52 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i])

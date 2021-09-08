@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 00:21:00 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/08 05:04:31 by adben-mc         ###   ########.fr       */
+/*   Created: 2021/09/08 00:26:42 by adben-mc          #+#    #+#             */
+/*   Updated: 2021/09/08 05:02:31 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isascii(int c)
 {
-	if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+	if (c < 0 || c > 127)
 		return (0);
 	return (1);
 }
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int main(int argc, char **argv)
-{
-	(void)argc;
-	printf("%d\n", ft_isalpha(atoi(argv[1])));
-}
-*/

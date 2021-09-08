@@ -6,7 +6,7 @@
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 00:05:10 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/01 00:10:24 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:05:46 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
+/*
 #include <stdio.h>
 
 int	main(int argc, char **argv)
@@ -40,3 +41,4 @@ int	main(int argc, char **argv)
 	(void)argc;
 	printf("%d\n", ft_atoi(argv[1]));
 }
+*/

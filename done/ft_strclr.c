@@ -6,13 +6,13 @@
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 00:13:44 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/01 00:15:21 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:02:04 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_strclr(char *s)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i])
