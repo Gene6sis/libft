@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/11 04:22:30 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/11 04:22:58 by adben-mc         ###   ########.fr       */
+/*   Created: 2021/09/12 02:56:53 by adben-mc          #+#    #+#             */
+/*   Updated: 2021/09/12 03:00:31 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	unsigned int	i;
+	int		size;
+	int		i;
+	char		*dest;
 
+	size = 0;
+	while (src[size])
+		size++;
+	dest = malloc(sizeof(*src) * (size + 1));
 	i = 0;
-	while (s[i])
+	while (src[i])
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		dest[i] = src[i];
 		i++;
 	}
-	return (NULL);
+	dest[i] = '\0';
+	return (dest);
 }
-/*
-#include <stdio.h>
-
-int main(int argc, char **argv)
-{
-	(void)argc;
-	printf("True : %s\n", strchr(argv[1], argv[2][0]));
-	printf("Fake : %s\n", ft_strchr(argv[1], argv[2][0]));
-}*/

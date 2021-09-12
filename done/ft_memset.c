@@ -6,13 +6,13 @@
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 00:32:41 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/09 02:53:14 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/09/11 04:24:23 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void   *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *str;
+	unsigned char	*str;
 
 	str = (unsigned char *)s;
 	while (n)

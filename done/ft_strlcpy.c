@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/11 04:21:48 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/11 04:22:11 by adben-mc         ###   ########.fr       */
+/*   Created: 2021/09/10 03:48:50 by adben-mc          #+#    #+#             */
+/*   Updated: 2021/09/12 02:14:50 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
 
-	if (needle[0] == '\0')
-		return ((char *)haystack);
+	if (!dst || !src)
+		return (0);
 	i = 0;
-	while (haystack[i] && i < len)
+	while (dstsize != 0 && i < dstsize - 1 && src[i])
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && j < len - 1)
-		{
-			if (!needle[j + 1])
-				return ((char *)&haystack[i]);
-			j++;
-		}
+		dst[i] = src[i];
 		i++;
 	}
-	return (0);
+	if (i < dstsize)
+		dst[i] = 0;
+	while (src[i])
+		i++;
+	return (i);
 }
 
 /*
@@ -42,7 +39,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 int main(int argc, char **argv)
 {
 	(void)argc;
-	printf("Original : %s\n", strnstr(argv[1], argv[2], atoi(argv[3])));
-	printf("Fake : %s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
+	char dest[100];
+	char *src = argv[2];
+	int nb = atoi(argv[3]);
+	printf("Original : %zu\t%s\n\n", strlcpy(dest, src, nb), dest);
+
+
+	char dest1[100];
+	printf("Fake : %zu\t%s\n\n", ft_strlcpy(dest1, src, nb), dest1);
+
+
+	char dest2[100];
+	printf("Fuck : %zu\t%s\n\n", ft_strlcpy1(dest2, src, nb), dest2);
 }
 */

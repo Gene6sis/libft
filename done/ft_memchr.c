@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/11 04:22:30 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/11 04:22:58 by adben-mc         ###   ########.fr       */
+/*   Created: 2021/09/12 02:18:10 by adben-mc          #+#    #+#             */
+/*   Updated: 2021/09/12 02:49:10 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
+#include <stdlib.h>
 
-char	*ft_strchr(const char *s, int c)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t		i;
+	unsigned char	*str;
 
+	str = (unsigned char *)s;
 	i = 0;
-	while (s[i])
+	while (i < n)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (str[i] == (unsigned char)c)
+			return (str + i);
 		i++;
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int main(int argc, char **argv)
-{
-	(void)argc;
-	printf("True : %s\n", strchr(argv[1], argv[2][0]));
-	printf("Fake : %s\n", ft_strchr(argv[1], argv[2][0]));
-}*/

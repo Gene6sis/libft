@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/11 04:22:30 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/11 04:22:58 by adben-mc         ###   ########.fr       */
+/*   Created: 2021/09/12 03:43:31 by adben-mc          #+#    #+#             */
+/*   Updated: 2021/09/12 03:50:59 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strchr(const char *s, int c)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	i;
+	size_t	i;
 
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		++s1;
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i]))
+		i--;
+	return (ft_substr(s1, 0, i + 1));
 }
-/*
-#include <stdio.h>
-
-int main(int argc, char **argv)
-{
-	(void)argc;
-	printf("True : %s\n", strchr(argv[1], argv[2][0]));
-	printf("Fake : %s\n", ft_strchr(argv[1], argv[2][0]));
-}*/
