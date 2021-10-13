@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 03:37:26 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/12 03:43:02 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:58:00 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char		*str;
+	char	*str;
+	size_t	lens1;
+	size_t	lens2;
 
 	if (s1 || s2)
 		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	str = malloc(sizeof(char) * (lens1 + lens2 + 1));
 	if (!str)
 		return (NULL);
-	ft_memcpy(str, s1, ft_strlen(s1));
-	ft_memcpy(str, s2, ft_strlen(s2));
-	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	ft_memcpy(str, s1, lens1);
+	ft_memcpy(str + lens1, s2, lens2);
+	str[lens1 + lens2] = '\0';
 	return (str);
 }

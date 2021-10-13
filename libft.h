@@ -6,7 +6,7 @@
 /*   By: adben-mc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 20:29:36 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/10/13 12:41:15 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/10/13 13:07:58 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int	ft_isprint(int c);
-int	isdigit(int c);
+int	ft_isdigit(int c);
 int	ft_isascii(int c);
 int	ft_isalpha(int c);
 int	ft_isalnum(int c);
