@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 02:56:53 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/09/12 03:00:31 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/18 13:57:20 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		size;
-	int		i;
+	int			size;
+	int			i;
 	char		*dest;
 
 	size = 0;

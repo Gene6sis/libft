@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 04:21:48 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/10/13 14:57:07 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/18 13:57:53 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (haystack[i] && i < len)
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j] && i+j < len)
+		while (haystack[i + j] == needle[j] && i + j < len)
 		{
 			j++;
 			if (needle[j] == 0)
