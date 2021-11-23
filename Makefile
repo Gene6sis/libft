@@ -107,6 +107,7 @@ bonus:		${OBJSBON}
 
 re:			fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+#
+#so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+#	gcc -nostartfiles -shared -o libft.so $(OBJS)
