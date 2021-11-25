@@ -1,7 +1,6 @@
 SRCS	=	ft_atoi.c				\
 			ft_isascii.c 			\
 			ft_memcpy.c  			\
-			ft_strcmp.c  			\
 			ft_strlcpy.c 			\
 			ft_strtrim.c			\
 			ft_bzero.c  			\
@@ -13,7 +12,6 @@ SRCS	=	ft_atoi.c				\
 			ft_calloc.c				\
 			ft_isprint.c 			\
 			ft_memset.c  			\
-			ft_striter.c 			\
 			ft_strncmp.c 			\
 			ft_tolower.c			\
 			ft_isalnum.c 			\
@@ -24,7 +22,6 @@ SRCS	=	ft_atoi.c				\
 			ft_toupper.c 			\
 			ft_isalpha.c 			\
 			ft_memcmp.c  			\
-			ft_strclr.c  			\
 			ft_strlcat.c 			\
 			ft_strrchr.c
 
