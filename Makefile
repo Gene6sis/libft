@@ -1,82 +1,42 @@
-SRCFOLD	= 	
+SRCS	=	ft_atoi.c				\
+			ft_isascii.c 			\
+			ft_memcpy.c  			\
+			ft_strcmp.c  			\
+			ft_strlcpy.c 			\
+			ft_strtrim.c			\
+			ft_bzero.c  			\
+			ft_isdigit.c			\
+			ft_memmove.c			\
+			ft_strdup.c 			\
+			ft_strlen.c 			\
+			ft_substr.c				\
+			ft_calloc.c				\
+			ft_isprint.c 			\
+			ft_memset.c  			\
+			ft_striter.c 			\
+			ft_strncmp.c 			\
+			ft_tolower.c			\
+			ft_isalnum.c 			\
+			ft_memchr.c  			\
+			ft_strchr.c  			\
+			ft_strjoin.c 			\
+			ft_strnstr.c 			\
+			ft_toupper.c 			\
+			ft_isalpha.c 			\
+			ft_memcmp.c  			\
+			ft_strclr.c  			\
+			ft_strlcat.c 			\
+			ft_strrchr.c
 
-HEADFOLD= 	./
-
-SRCS	=	${SRCFOLD}ft_atoi.c				\
-			${SRCFOLD}ft_bzero.c			\
-			${SRCFOLD}ft_calloc.c			\
-			${SRCFOLD}ft_isalnum.c			\
-			${SRCFOLD}ft_isalpha.c			\
-			${SRCFOLD}ft_isascii.c			\
-			${SRCFOLD}ft_isdigit.c			\
-			${SRCFOLD}ft_isprint.c			\
-			${SRCFOLD}ft_memchr.c			\
-			${SRCFOLD}ft_memcmp.c			\
-			${SRCFOLD}ft_memcpy.c			\
-			${SRCFOLD}ft_memmove.c			\
-			${SRCFOLD}ft_memset.c			\
-			${SRCFOLD}ft_strchr.c			\
-			${SRCFOLD}ft_strclr.c			\
-			${SRCFOLD}ft_strcmp.c			\
-			${SRCFOLD}ft_strdup.c			\
-			${SRCFOLD}ft_striter.c			\
-			${SRCFOLD}ft_strjoin.c			\
-			${SRCFOLD}ft_strlcat.c			\
-			${SRCFOLD}ft_strlcpy.c			\
-			${SRCFOLD}ft_strlen.c			\
-			${SRCFOLD}ft_strncmp.c			\
-			${SRCFOLD}ft_strnstr.c			\
-			${SRCFOLD}ft_strrchr.c			\
-			${SRCFOLD}ft_strtrim.c			\
-			${SRCFOLD}ft_substr.c			\
-			${SRCFOLD}ft_tolower.c			\
-			${SRCFOLD}ft_toupper.c			
-			
-SRCSBONUS =	${SRCFOLD}ft_atoi.c			\
-			${SRCFOLD}ft_bzero.c		\
-			${SRCFOLD}ft_calloc.c		\
-			${SRCFOLD}ft_isalnum.c		\
-			${SRCFOLD}ft_isalpha.c		\
-			${SRCFOLD}ft_isascii.c		\
-			${SRCFOLD}ft_isdigit.c		\
-			${SRCFOLD}ft_isprint.c		\
-			${SRCFOLD}ft_memccpy.c		\
-			${SRCFOLD}ft_memchr.c		\
-			${SRCFOLD}ft_memcmp.c		\
-			${SRCFOLD}ft_memcpy.c		\
-			${SRCFOLD}ft_memmove.c		\
-			${SRCFOLD}ft_memset.c		\
-			${SRCFOLD}ft_strchr.c		\
-			${SRCFOLD}ft_strdup.c		\
-			${SRCFOLD}ft_strlcat.c		\
-			${SRCFOLD}ft_strlcpy.c		\
-			${SRCFOLD}ft_strlen.c		\
-			${SRCFOLD}ft_strncmp.c		\
-			${SRCFOLD}ft_strnstr.c		\
-			${SRCFOLD}ft_strrchr.c		\
-			${SRCFOLD}ft_tolower.c		\
-			${SRCFOLD}ft_toupper.c		\
-			${SRCFOLD}ft_itoa.c			\
-			${SRCFOLD}ft_putchar_fd.c	\
-			${SRCFOLD}ft_putendl_fd.c	\
-			${SRCFOLD}ft_putnbr_fd.c	\
-			${SRCFOLD}ft_putstr_fd.c	\
-			${SRCFOLD}ft_split.c		\
-			${SRCFOLD}ft_strjoin.c		\
-			${SRCFOLD}ft_strmapi.c		\
-			${SRCFOLD}ft_strtrim.c		\
-			${SRCFOLD}ft_substr.c		\
-			${SRCFOLD}ft_lstadd_back.c	\
-			${SRCFOLD}ft_lstadd_front.c	\
-			${SRCFOLD}ft_lstclear.c		\
-			${SRCFOLD}ft_lstdelone.c	\
-			${SRCFOLD}ft_lstiter.c		\
-			${SRCFOLD}ft_lstlast.c		\
-			${SRCFOLD}ft_lstmap.c		\
-			${SRCFOLD}ft_lstnew.c		\
-			${SRCFOLD}ft_lstsize.c			
-
-HEADER	=	${HEADFOLD}libft.h
+SRCSBONUS =	ft_lstadd_back.c		\
+			ft_lstadd_front.c		\
+			ft_lstclear.c			\
+			ft_lstdelone.c			\
+			ft_lstiter.c			\
+			ft_lstlast.c			\
+			ft_lstmap.c				\
+			ft_lstnew.c				\
+			ft_lstsize.c
 
 OBJS	= 	${SRCS:.c=.o}
 
@@ -89,21 +49,21 @@ RM		=	rm -f
 CFLAGS	=	-Wall -Werror -Wextra
 
 .c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${HEADFOLD}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	${OBJS}
-			ar rc $(NAME) ${OBJS}
+			ar -rcs $(NAME) $(OBJS)
 
-all:		$(NAME)
+all:		${NAME}
 
 clean:
-			${RM} ${OBJSBON}
+			${RM} ${OBJSBON} ${OBJS}
 
 fclean:		clean
-			${RM} $(NAME)
+			${RM} ${NAME} 
 
 bonus:		${OBJSBON}
-			ar rc $(NAME) ${OBJSBON}
+			ar -rcs $(NAME) ${OBJSBON} ${OBJS}
 
 re:			fclean all
 
@@ -111,3 +71,5 @@ re:			fclean all
 #so:
 #	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 #	gcc -nostartfiles -shared -o libft.so $(OBJS)
+
+.PHONY:		bonus all clean fclean re
