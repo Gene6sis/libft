@@ -23,6 +23,8 @@ SRCS	=	ft_atoi.c				\
 			ft_isalpha.c 			\
 			ft_memcmp.c  			\
 			ft_strlcat.c 			\
+			ft_split.c	 			\
+			ft_putchar_fd.c 		\
 			ft_strrchr.c
 
 SRCSBONUS =	ft_lstadd_back.c		\
