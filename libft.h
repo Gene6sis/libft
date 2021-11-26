@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 20:29:36 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/25 18:03:30 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:07:55 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ int		ft_isalnum(int c);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *str);
+void	ft_putchar_fd(char c, int fd);
+char	**ft_split(char const *s, char c);
 
 #endif

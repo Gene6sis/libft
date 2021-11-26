@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 02:56:53 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/18 13:57:20 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/25 22:36:18 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *s1)
 	while (s1[size])
 		size++;
 	dest = malloc(sizeof(*s1) * (size + 1));
+	if (!dest)
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{
