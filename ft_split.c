@@ -6,14 +6,14 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:16:31 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/25 23:39:28 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:52:19 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_len(char const *str, char charset)
+static int	ft_len(char const *str, char charset)
 {
 	unsigned int	i;
 	unsigned int	compt;
@@ -33,7 +33,7 @@ int	ft_len(char const *str, char charset)
 	return (compt);
 }
 
-int	ft_elements(char const *str, char charset)
+static int	ft_elements(char const *str, char charset)
 {
 	unsigned int	i;
 	unsigned int	compt;
