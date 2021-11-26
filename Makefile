@@ -25,7 +25,13 @@ SRCS	=	ft_atoi.c				\
 			ft_strlcat.c 			\
 			ft_split.c	 			\
 			ft_putchar_fd.c 		\
-			ft_strrchr.c
+			ft_strrchr.c			\
+			ft_itoa.c				\
+			ft_putstr_fd.c			\
+			ft_putnbr_fd.c			\
+			ft_putendl_fd.c			\
+			ft_strmapi.c			\
+			ft_striteri.c
 
 SRCSBONUS =	ft_lstadd_back.c		\
 			ft_lstadd_front.c		\
@@ -66,9 +72,8 @@ bonus:		${OBJSBON}
 
 re:			fclean all
 
-#
-#so:
-#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-#	gcc -nostartfiles -shared -o libft.so $(OBJS)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 .PHONY:		bonus all clean fclean re

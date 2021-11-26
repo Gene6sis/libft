@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:16:31 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/26 13:56:15 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:38:24 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,13 @@ char	**ft_split(char const *s, char c)
 	{
 		j = 0;
 		result[i] = malloc(sizeof(char) * (ft_len(&s[x], c) + 1));
+		if (!result[i])
+			return (0);
 		while (s[x] == c && s[x])
 			x++;
 		while (s[x] != c && s[x])
 			result[i][j++] = s[x++];
-		result[i][j] = '\0';
-		i++;
+		result[i++][j] = '\0';
 	}
 	result[i] = 0;
 	return (result);

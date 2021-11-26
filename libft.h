@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 20:29:36 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/25 18:07:55 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:28:58 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,17 @@ void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *str);
 void	ft_putchar_fd(char c, int fd);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 #endif
