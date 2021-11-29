@@ -6,7 +6,7 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 03:48:50 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/25 18:02:46 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/29 19:54:00 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
-	if (!dst || !src)
-		return (0);
 	i = 0;
 	while (dstsize != 0 && i < dstsize - 1 && src[i])
 	{

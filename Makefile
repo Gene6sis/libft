@@ -33,15 +33,17 @@ SRCS	=	ft_atoi.c				\
 			ft_strmapi.c			\
 			ft_striteri.c
 
-SRCSBONUS =	ft_lstadd_back.c		\
-			ft_lstadd_front.c		\
-			ft_lstclear.c			\
+SRCSBONUS =	ft_lstnew.c				\
+			ft_lstsize.c			\
+			ft_lstlast.c			\
 			ft_lstdelone.c			\
 			ft_lstiter.c			\
-			ft_lstlast.c			\
-			ft_lstmap.c				\
-			ft_lstnew.c				\
-			ft_lstsize.c
+			ft_lstclear.c			\
+			ft_lstadd_front.c		\
+			ft_lstadd_back.c		\
+			#ft_lstmap.c
+
+#ft_lstadd_back.c	ft_lstadd_front.c	#ft_lstclear.c #ft_lstdelone.c #ft_lstiter.c #ft_lstlast.c #ft_lstmap.c	 #ft_lstnew.c	 #ft_lstsize.c		
 
 OBJS	= 	${SRCS:.c=.o}
 
@@ -67,13 +69,13 @@ clean:
 fclean:		clean
 			${RM} ${NAME} 
 
-bonus:		${OBJSBON}
+bonus:		${OBJSBON} ${OBJS}
 			ar -rcs $(NAME) ${OBJSBON} ${OBJS}
 
 re:			fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCSBONUS) $(SRCS) 
+	gcc -nostartfiles -shared -o libft.so $(OBJSBON) $(OBJS) 
 
 .PHONY:		bonus all clean fclean re
