@@ -41,9 +41,7 @@ SRCSBONUS =	ft_lstnew.c				\
 			ft_lstclear.c			\
 			ft_lstadd_front.c		\
 			ft_lstadd_back.c		\
-			#ft_lstmap.c
-
-#ft_lstadd_back.c	ft_lstadd_front.c	#ft_lstclear.c #ft_lstdelone.c #ft_lstiter.c #ft_lstlast.c #ft_lstmap.c	 #ft_lstnew.c	 #ft_lstsize.c		
+			ft_lstmap.c	
 
 OBJS	= 	${SRCS:.c=.o}
 
@@ -74,8 +72,8 @@ bonus:		${OBJSBON} ${OBJS}
 
 re:			fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCSBONUS) $(SRCS) 
-	gcc -nostartfiles -shared -o libft.so $(OBJSBON) $(OBJS) 
+#so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCSBONUS) $(SRCS) 
+#	gcc -nostartfiles -shared -o libft.so $(OBJSBON) $(OBJS) 
 
 .PHONY:		bonus all clean fclean re
