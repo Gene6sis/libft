@@ -6,12 +6,11 @@
 /*   By: adben-mc <adben-mc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:16:31 by adben-mc          #+#    #+#             */
-/*   Updated: 2021/11/26 15:38:24 by adben-mc         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:35:50 by adben-mc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_len(char const *str, char charset)
 {
